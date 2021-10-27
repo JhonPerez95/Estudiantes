@@ -1,12 +1,10 @@
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class Estudiantes {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
 
-        // Para solicitar informacion al usuario
-        Scanner scUI = new Scanner(System.in);
+
 
         // Creamos variables necesarias
         int opcion = 0;
