@@ -29,6 +29,43 @@ public class Estudiantes {
                         JOptionPane.QUESTION_MESSAGE));
 
                 System.out.println("Opcion elegida por el usuario: " + opcion);
+                
+                switch (opcion) {
+                    case 1:
+                        obj.registrarEstudiante();
+                        flag = true;
+                        break;
+
+                    case 2:
+                        if (flag){
+                            obj.getCarreras();
+                        }else{
+                            JOptionPane.showMessageDialog(null,"NO SE ENCONTRARON ESTUDIANTES REGISTRADOS");
+                        }
+                    break;
+
+                    case 3:
+                        if (flag){
+                        	profession = JOptionPane.showInputDialog(null,
+                                    "DIGITAR NOMBRE DE LA CARRERA A CONSULTAR ");
+
+
+                            obj.consultarCarrera(profession);
+                        }else {
+                            JOptionPane.showMessageDialog(null, "NO SE ENCONTRARON CARRERAS A CONSULTAR");
+
+                        }
+                    break;
+
+                    case 4:
+
+                        JOptionPane.showMessageDialog(null, "ADIOS REGRESA PRONTO :D ");
+                        System.exit(0);
+                        break;
+                    default:
+                        JOptionPane.showMessageDialog(null, "OPCION NO ENCONTRADA (INVALIDA)");
+                        break;
+				}
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "ERROR ! " + e.getMessage());
             }

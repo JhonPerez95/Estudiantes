@@ -10,7 +10,7 @@ public class DatosEstudiante  extends Carrera {
 
     List<Carrera> carreras = new ArrayList<>();
     
-    private String Carrera;
+    private String carreraEst;
 
     public List <Carrera> registrarEstudiante() {
         int numbered = Integer.parseInt(JOptionPane.showInputDialog("Cuantos estudiantes desea registrar: "));
@@ -33,10 +33,13 @@ public class DatosEstudiante  extends Carrera {
                 		JOptionPane.QUESTION_MESSAGE));
                 carrera.setSemestre(semestre);
 
-                Carrera = JOptionPane.showInputDialog(null, "4. Ingrese el nombre de la carrera: ", JOptionPane.QUESTION_MESSAGE);
-                carrera.setCarrera(carrera);
+                carreraEst = JOptionPane.showInputDialog(null,
+                		"4. Ingrese el nombre de la carrera: ",
+                		JOptionPane.QUESTION_MESSAGE);
+                carrera.setCarrera(carreraEst);
 
                 carreras.add(carrera);
+                System.out.println("Datos guardados Carerra: " + carreras);
             }
         } else {
             JOptionPane.showMessageDialog(null, "El numero es invalido!");   
