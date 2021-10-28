@@ -1,3 +1,6 @@
+package estudiantes;
+
+
 import javax.swing.JOptionPane;
 
 public class Estudiantes {
@@ -11,12 +14,13 @@ public class Estudiantes {
         String profession;
         boolean flag = false;
 
+        
         // Creamos el string mensaje a mostrar
         String messageOption = "REGISTRO DE ESTUDIANTES:\n" + "1. Registro de estudiantes\n"
                 + "2. Consulta Datos Por Estudiantes\n" + "3. Consulta Carreras\n" + "4. Salir\n";
-
-        // TODO:
-        // TRAER LA CLASE DE DATOS
+        
+        // Creamos una instacia de la clase DatosEstudiante
+        DatosEstudiante obj = new DatosEstudiante ();        // TRAER LA CLASE DE DATOS
 
         do {
             try {
