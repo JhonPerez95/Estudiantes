@@ -1,2 +1,4 @@
 .vscode
 /bin1/
+/nbproject/private/
+/build/
